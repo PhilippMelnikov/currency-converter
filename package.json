@@ -5,7 +5,7 @@
     "build": "parcel build index.html --dist-dir dist",
     "start": "parcel serve index.html"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.html",
   "author": "Philipp Melnikov",
   "license": "MIT",
   "devDependencies": {
