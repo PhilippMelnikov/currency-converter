@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link href="./styles.less" rel="stylesheet">
+    <script src="./src/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Currency Converter</div>
+    </header>
+    <div class="container">
+      <div class="calculator-box">
+        <div class="input-field-group">
+          <span class="input-field">
+            <label for="from">From</label>
+            <select name="from" id="from">
+              <option selected value="USD">USD</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </span>
+          <span class="input-field">
+            <label for="to">To</label>
+            <select name="to" id="to">
+              <option selected value="EUR">EUR</option>
+              <option value="USD">USD</option>
+            </select>
+          </span>
+        </div>
+        <div class="input-field-group">
+          <span class="input-field input-field_value">
+            <input type="text" placeholder="99.99" >
+          </span>
+          <span class="equals">=</span>
+          <span class="result" id="result">
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

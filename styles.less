@@ -1,0 +1,186 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+	line-height: 1;
+	font-family: sans-serif;
+}
+
+header {
+  background: #303b44;
+  padding: 0.8rem 3rem;
+
+	@media screen and (max-width: 425px) {
+		padding: 0.8rem 2rem;
+		text-align: center;
+	}
+}
+
+.logo  {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: sans-serif;
+
+	@media screen and (max-width: 425px) {
+		font-size: 1.4rem;
+	}
+}
+
+.container {
+	padding: 0 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(~'100vh - 3.6rem');
+
+	@media screen and (max-width: 425px) {
+		height: calc(~'100vh - 6.6rem');
+	}
+}
+
+.calculator-box {
+	padding: 2rem;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+	@media screen and (max-width: 425px) {
+		padding: 2rem 1rem;
+	}
+}
+
+.input-field-group {
+	& + & {
+		margin-top: 20px;
+	}
+}
+
+.input-field {
+	display: inline-block;
+
+	label	{
+		display: block;
+		margin-bottom: 8px;
+		color: rgb(77, 76, 76);
+	}
+	& + & {
+		margin-left: 30px;
+		
+		@media screen and (max-width: 425px) {
+			margin-left: 17px;
+		}
+	}
+}
+
+.equals {
+	margin: 0 8px;
+
+	@media screen and (max-width: 425px) {
+		margin: 0 2.5px;
+	}
+}
+
+.result {
+	display: inline-block;
+	width: 160px;
+	padding-left: 12px;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+  border: 1px solid #ccc;
+	vertical-align: middle;
+	overflow: hidden;
+
+	@media screen and (max-width: 425px) {
+		width: 115px;
+		padding-left: 10px;
+	}
+}
+
+input, select {
+	outline: none;
+	color: #202124;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 160px;
+	height: 36px;
+	vertical-align: middle;
+	font-size: 14px;
+
+	@media screen and (max-width: 425px) {
+		width: 115px;
+	}
+}
+
+input {
+	padding-left: 12px;
+
+	@media screen and (max-width: 425px) {
+		padding-left: 10px;
+	}
+}
+
+select {
+	-webkit-appearance: button;
+	font-size: 13px;
+	list-style: none;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #fff;
+	padding-left: 8px;
+}
