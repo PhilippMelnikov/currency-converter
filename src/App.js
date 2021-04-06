@@ -23,9 +23,9 @@ export default class App {
   }
 
   setListeners = () => {
-    const selectEls = document.getElementsByTagName('select');
-    for (let i = 0; i < selectEls.length; i++) {
-      const el = selectEls[i];
+    const selectElements = document.getElementsByTagName('select');
+    for (let i = 0; i < selectElements.length; i++) {
+      const el = selectElements[i];
       el.addEventListener('change', this.onCurrencySelect);
     }
 
