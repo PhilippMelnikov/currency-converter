@@ -36,10 +36,12 @@ export default class App {
     const options = Object.keys(rates)
       .map(currency => `<option value="${currency}">${currency}</option>`)
       .join('');
+
     document.querySelectorAll('select').forEach((select, idx) => {
+      const { name } = select;
       select.innerHTML = options;
-      select.querySelector(`[value="${idx === 0 ? this.from : this.to}"]`).setAttribute('selected', true);
-    })
+      select.querySelector(`[value="${this[name]}"]`).setAttribute('selected', true);
+    });
   }
 
   onCurrencySelect = (e) => {
